@@ -6,14 +6,22 @@ function createLegend() {
   legend.onAdd = function() {
     var div = L.DomUtil.create("div", "info legend");
     var limits = [" 0-1 ", " 1-2 ", " 2-3 ", " 3-4 ", " 4-5 ", " 5+ "];
-    var colors = ["green", "lightgreen", "yellow", "orange", "lightred", "red"];
+    var colors = [
+      "green",
+      "lightgreen",
+      "yellow",
+      "orange",
+      "orangered",
+      "red"
+    ];
     var labels = [];
 
-    // Add min & max
+    // create the legend with css class lables
     var legendInfo = '<div class="labels"></div>';
 
     div.innerHTML = legendInfo;
 
+    // Add text for each level
     limits.forEach(function(limit, index) {
       labels.push(
         '<li style="background-color: ' +
@@ -24,13 +32,10 @@ function createLegend() {
       );
     });
 
-    console.log(labels);
-
     div.innerHTML += "<ul>" + labels.join("") + "</ul>";
-    console.log(div);
     return div;
   };
-  console.log(legend);
+
   return legend;
 }
 
@@ -94,9 +99,9 @@ function configMarker(feature) {
     circleMarker["fillColor"] = "orange";
     circleMarker["color"] = "orange";
     circleMarker["radius"] = 9;
-  } else if (feature.properties.mag <= 2) {
-    circleMarker["fillColor"] = "lightred";
-    circleMarker["color"] = "lightred";
+  } else if (feature.properties.mag <= 5) {
+    circleMarker["fillColor"] = "orangered";
+    circleMarker["color"] = "orangered";
     circleMarker["radius"] = 11;
   } else {
     circleMarker["fillColor"] = "red";

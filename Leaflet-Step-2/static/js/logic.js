@@ -182,9 +182,9 @@ function createPolygons(response) {
   // Create a GeoJSON layer containing the features array on the plates object
   // Run the onEachFeature function once for each piece of data in the array
   var plLayer = L.geoJSON(plData, {
-    // style: function(feature) {
-    //   return { color: "orange", fill: false };
-    // },
+    style: function(feature) {
+      return { color: "orange", fillOpacity: 0.01 };
+    },
     onEachFeature: onEachFeature
   });
 
@@ -208,7 +208,7 @@ d3.json(url_eq, data => {
 
   d3.json(url_pl, data_pl => {
     // Create a layer with the earthquake information
-    plLayer = createPolygons(data_pl);
+    var plLayer = createPolygons(data_pl);
 
     // Sending layers to the create the Map
     createMap(eqLayer, plLayer, mapZoomLevel);

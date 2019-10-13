@@ -1,11 +1,10 @@
 # Data Journalism and D3
 
-![Bacteria Image](images/bacteria.webp)
 
-In this assignment we explore a data set on the different bacteria that could call home the human belly button.
-A full stack application was developed to provide an easier way of traversing the data and learn about this thirlling topic. This stack was deployed, using heroku, to URL: https://magu-belly-diverse.herokuapp.com/
+The USGS is interested in building a new set of tools that will allow them visualize their earthquake data. They collect a massive amount of data from all over the world each day, but they lack a meaningful way of displaying it. Their hope is that being able to visualize their data will allow them to better educate the public and other government organizations (and hopefully secure more funding..) on issues facing our planet.
 
-Data is stored in a sqlLite database, accessed via Python and SQLAlchemy, passed to javascripts using Python and Flask and charted using javascirpts and Plotly. The structure of the website is provided with HTML, while the formatting is achieved with boostrap and a local CSS.
+Data is retrieved from two different sites on the web (https://earthquake.usgs.gov and https://raw.githubusercontent.com/fraxen/tectonicplates/master ) and then charted on screen to provide the user a way to contrast the earthquake information against the tectonic plates placement.
+
 
 ### Prerequisites
 
@@ -14,12 +13,10 @@ Please check file "requirements.txt" for a full llist of libraries and versions
 
 ## Running the tests
 
-Run directly the web site by opening the URL "https://magu-belly-diverse.herokuapp.com/" in a web browser
-
 Run locally by:
 1. Create a local directory
 2. Copy the repo into your local directory
-3. Execute python program "app.py"
+3. 
 
 
 ## Built With
@@ -34,7 +31,7 @@ Run locally by:
 I would like to thank:
 * Justin Parker
 * Huy Yang
-* com2m - for a clear explanation of how to achieve the gauge chart
+* 
 
 ## Authors
 
